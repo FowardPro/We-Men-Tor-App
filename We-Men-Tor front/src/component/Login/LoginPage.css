@@ -1,0 +1,196 @@
+.login-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+  }
+ 
+  .header-text {
+    margin-left: 20px;
+    color: white;
+    text-align: left;
+  }
+  
+  .header-text h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .header-text span {
+    font-size: 14px;
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Adjust this to change spacing between links */
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.navigation a:hover {
+    color: #66ccff; /* Add a hover effect to make it clear that the links are clickable */
+}
+
+.login-box .forgot-password, .login-box p a {
+    color: #66ccff; /* Ensure the links inside the login box are visible */
+    text-decoration: none;
+}
+
+.login-box .forgot-password:hover, .login-box p a:hover {
+    color: #ffffff; /* Add a hover effect for links inside the login box */
+}
+
+.login-box p {
+    margin-top: 20px;
+}
+
+.login-box p a {
+    color: #66ccff;
+    text-decoration: none;
+}
+.login-box button {
+  width: 96%; /* Adjusted to make the button fit better within the box */
+  padding: 10px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px; /* Added margin for spacing */
+
+}
+  
+.login-box {
+    background-color: rgb(0, 20, 46); /* Dark background color for depth */
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* Relative positioning for the 3D effect */
+    box-shadow: 
+      10px 10px 20px rgba(0, 0, 0, 0.7), /* Strong shadow to the bottom right */
+      -10px -10px 20px rgba(255, 255, 255, 0.2); /* Light shadow to the top left */
+    background-image: linear-gradient(145deg, rgb(10, 30, 60), rgb(0, 20, 46)); /* Subtle gradient for a polished look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .login-box:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 
+      15px 15px 25px rgba(0, 0, 0, 0.7), /* Enhanced shadow on hover */
+      -15px -15px 25px rgba(255, 255, 255, 0.2); /* Enhanced light shadow on hover */
+  }
+  
+  .login-box h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .login-box h3 {
+    margin: 10px 0;
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  .login-box input {
+    width: 90%; /* Adjusted to make the inputs fit better within the box */
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+
+  
+  .login-box .forgot-password {
+    display: block;
+    margin: 10px 0;
+    color: #66ccff;
+    text-decoration: none;
+    
+  }
+  
+  
+  .login-box p {
+    margin-top: 20px;
+  }
+  
+  .login-box p a {
+    color: #66ccff;
+    text-decoration: none;
+  }
+  @keyframes blinkShadow {
+    0% { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -1px 0px 5px rgba(253, 180, 180, 0.616); }
+    50% { box-shadow: none; }
+    100% { box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -1px 0px 15px rgba(216, 172, 172, 0.384); }
+  }
+  
+  .navigation a  {
+    width: 90%; /* Adjusted to make the button fit better within the box */
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Added margin for spacing */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), 0px 5px rgba(255, 255, 255, 0.2); /* Initial shadow */
+     /* Added shadow blink animation */
+  }
+  .loginButton {
+  
+    animation: blinkShadow 1s infinite; /* Added shadow blink animation */
+  }
+  .error-message {
+    color: #ff4d4d; /* Red color for error */
+    background-color: #ffe6e6; /* Light red background */
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0;
+    margin-right: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ff4d4d; /* Red border */
+  }
+  
+  
+  
