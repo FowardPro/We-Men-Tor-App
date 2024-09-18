@@ -1,0 +1,70 @@
+/* src/components/Navbar.module.css */
+.navbar {
+  background-color: #1f2a44;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Account holder profile picture and name */
+.accountHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto; /* Pushes the profile section to the right */
+  color: #fff; /* Ensure text is visible on dark background */
+}
+
+.profilePicture {
+  border-radius: 50%;
+  width: 40px; /* Profile picture size */
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: 0px;
+  border: 2px solid #fff; /* Adds a border around the image */
+}
+
+.accountName {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: #fff; /* Ensures text color matches the theme */
+}
+
+
+
+/* Hamburger Icon lines */
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .navbarContainer {
+      justify-content: space-between;
+  }
+
+  /* Optional if you want the hamburger icon to show on mobile */
+  /* Hamburger Icon */
+  .hamburgerIcon {
+    display: flex; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .accountHolder {
+    display: none;
+      
+
+  }
+}

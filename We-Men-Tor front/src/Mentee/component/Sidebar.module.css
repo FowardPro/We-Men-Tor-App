@@ -1,0 +1,87 @@
+/* Sidebar styles */
+.sidebar {
+  width: 200px; /* Default width */
+  min-height: calc(100vh - 110px);
+  background-color: #1f2a44;
+  color: #fff;
+  position: sticky; /* Sticks to the left */
+  top: 110px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  transform: translateX(0); /* Sidebar is visible by default */
+}
+
+/* When the sidebar is open */
+.open {
+  transform: translateX(0); /* Sidebar slides in */
+}
+
+
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  margin: 20px 0;
+ 
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Show pointer cursor to indicate it's clickable */
+  transition: background-color 0.3s ease;
+}
+
+.menuItem:hover {
+  background-color: #2f3b52;
+  padding-left: 10px;
+}
+
+.menuItem svg {
+  margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* TABLET SIZE: Only show icons */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 80px; /* Shrink the sidebar */
+  }
+
+  .menuItem li{
+    font-size: 20px; /* Hide the text */
+    padding: 0;
+  }
+
+  .menuItem span {
+    font-size: 0px; /* Hide the text */
+    padding: 0;   /* Remove padding */
+  }
+
+  .menuItem svg {
+    margin-right: 0;
+  }
+
+  .menuItem {
+    font-size: 20px;
+  }
+}
+
+/* MOBILE SIZE: Hide sidebar, show hamburger icon */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide sidebar */
+    top: 40px; /* Adjusted for smaller screens */
+    min-height: calc(100vh - 40px);
+    
+  }
+
+  .open {
+    display: flex; /* Show sidebar when open */
+    transform: translateX(0);
+
+  }
+}
